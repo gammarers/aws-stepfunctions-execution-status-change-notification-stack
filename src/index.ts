@@ -1,7 +1,7 @@
+import { StepFunctionsExecutionStatusChangeDetectionEventRule } from '@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule';
 import { Duration, Stack, StackProps } from 'aws-cdk-lib';
 import * as events from 'aws-cdk-lib/aws-events';
 import * as targets from 'aws-cdk-lib/aws-events-targets';
-import { StepFunctionsExecutionStatusChangeDetectionEventRule } from '/Users/y-higa/Workspace/@gammarers/aws-cdk-construct-libs/aws-stepfunctions-execution-status-change-detection-event-rule/lib';
 import * as sns from 'aws-cdk-lib/aws-sns';
 import * as subscriptions from 'aws-cdk-lib/aws-sns-subscriptions';
 import { Construct } from 'constructs';
