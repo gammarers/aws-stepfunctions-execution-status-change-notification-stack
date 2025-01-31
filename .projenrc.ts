@@ -9,6 +9,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: '@gammarers/aws-stepfunctions-execution-status-change-notification-stack',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-stepfunctions-execution-status-change-notification-stack.git',
+  deps: [
+    '@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule@^0.1.2',
+  ],
   releaseToNpm: false, // todo:temp
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '18.0.0',
