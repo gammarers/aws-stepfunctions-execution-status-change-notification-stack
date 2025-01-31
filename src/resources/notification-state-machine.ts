@@ -1,11 +1,11 @@
 // import { Stack } from 'aws-cdk-lib';
-// import * as sns from 'aws-cdk-lib/aws-sns';
+import * as sns from 'aws-cdk-lib/aws-sns';
 import * as sfn from 'aws-cdk-lib/aws-stepfunctions';
-// import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks';
+import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks';
 import { Construct } from 'constructs';
 
 export interface NotificationStateMachineProps extends sfn.StateMachineProps {
-  // notificationTopic: sns.ITopic;
+  notificationTopic: sns.ITopic;
 }
 
 export class NotificationStateMachine extends sfn.StateMachine {
@@ -71,7 +71,6 @@ export class NotificationStateMachine extends sfn.StateMachine {
         });
 
         prepareTopicValue.next(generateTopicValue);
-        generateTopicValue.next(succeed);
 
         // 👇 Choice state for message
         const isNotMe: sfn.Choice = new sfn.Choice(scope, 'isNotMe')
@@ -82,6 +81,22 @@ export class NotificationStateMachine extends sfn.StateMachine {
           .otherwise(new sfn.Pass(scope, 'Skip').next(succeed));
 
         initDefinition.next(isNotMe);
+
+        // 👇 SNS Topic Publish
+        const publishMessage = new tasks.SnsPublish(scope, 'PublishMessage', {
+          topic: props.notificationTopic,
+          subject: sfn.JsonPath.stringAt('$.Generate.Topic.Subject'),
+          message: sfn.TaskInput.fromObject({
+            default: sfn.JsonPath.stringAt('$.Generate.Topic.TextMessage'),
+            email: sfn.JsonPath.stringAt('$.Generate.Topic.TextMessage'),
+            // lambda: sfn.JsonPath.jsonToString(sfn.JsonPath.objectAt('$.Generate.Topic.SlackJsonMessage')),
+          }),
+          messagePerSubscriptionType: true,
+          resultPath: '$.Result.Sns',
+        });
+        publishMessage.next(succeed);
+
+        generateTopicValue.next(publishMessage);
 
         //
         //        // 👇 Send notification task
