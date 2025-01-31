@@ -400,6 +400,18 @@
     "@eslint/core" "^0.10.0"
     levn "^0.4.1"
 
+"@gammarers/aws-cdk-errors@^1.2.10":
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/@gammarers/aws-cdk-errors/-/aws-cdk-errors-1.2.10.tgz#d3785b80b3bbe6081373f012a28d28e0b51d2ccf"
+  integrity sha512-e2uLgGYKtTo5SA/kKTjGSJJdB+TmMZNM6gLEnncqIkI06j8RQxPPXB+MDO+7vGDWKjKP4rrcDKtTxXve+AF4FQ==
+
+"@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule/-/aws-stepfunctions-execution-status-change-detection-event-rule-0.1.2.tgz#bc2ab7f99b8de4dc660344bc2999110867104283"
+  integrity sha512-JdxzZ8rkRswSs2KFkv2YOxzf7Rh2b4bQdzl4FjV5SEe2J8bM/h6+23G8dgM09eARv33awEG0VkN/9yslUzB0Ig==
+  dependencies:
+    "@gammarers/aws-cdk-errors" "^1.2.10"
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz#17c55ca7d426733fe3c561906b8173c336b40a77"

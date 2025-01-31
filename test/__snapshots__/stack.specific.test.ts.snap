@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Stack Default Testing Should match snapshot 1`] = `
+exports[`Stack Specific Testing Should match snapshot 1`] = `
 {
   "Mappings": {
     "ServiceprincipalMap": {
@@ -121,6 +121,26 @@ exports[`Stack Default Testing Should match snapshot 1`] = `
   "Resources": {
     "NotificationTopicEB7A0DF1": {
       "Type": "AWS::SNS::Topic",
+    },
+    "NotificationTopicbarexamplenetB2CEEB3B": {
+      "Properties": {
+        "Endpoint": "bar@example.net",
+        "Protocol": "email",
+        "TopicArn": {
+          "Ref": "NotificationTopicEB7A0DF1",
+        },
+      },
+      "Type": "AWS::SNS::Subscription",
+    },
+    "NotificationTopicfooexamplecom623834B6": {
+      "Properties": {
+        "Endpoint": "foo@example.com",
+        "Protocol": "email",
+        "TopicArn": {
+          "Ref": "NotificationTopicEB7A0DF1",
+        },
+      },
+      "Type": "AWS::SNS::Subscription",
     },
     "StateMachine2E01A3A5": {
       "DeletionPolicy": "Delete",
