@@ -1,12 +1,12 @@
 import { App } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import { CodePipelineExecutionStateChangeNotificationStack } from '../src';
+import { StepFunctionsExecutionStatueChangeNotificationStack } from '../src';
 
 describe('Stack Default Testing', () => {
 
   const app = new App();
 
-  const stack = new CodePipelineExecutionStateChangeNotificationStack(app, 'CodePipelineExecutionStateChangeNotificationStack');
+  const stack = new StepFunctionsExecutionStatueChangeNotificationStack(app, 'StepFunctionsExecutionStatueChangeNotificationStack');
 
   const template = Template.fromStack(stack);
 
