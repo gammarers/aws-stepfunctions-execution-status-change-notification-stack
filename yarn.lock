@@ -410,10 +410,10 @@
   resolved "https://registry.yarnpkg.com/@gammarers/aws-cdk-errors/-/aws-cdk-errors-1.2.16.tgz#c8642af596aa6c2bfd50c040fb6b6c1dd31e1617"
   integrity sha512-FtJ8Ikli8UDEyccqvxgFHggJ1DA9qI8B3FVSbXMd+nQ0yGqrZYMORb9WV9u4KMjwSAUPnWmJsfKtqWWeufW/4g==
 
-"@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule@^0.1.2":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule/-/aws-stepfunctions-execution-status-change-detection-event-rule-0.1.8.tgz#aab53b21dab41a6d96347fae27694456339f9a34"
-  integrity sha512-bhCRMm5TWMpp5J47XaUTt2hK9G57ZY43NxpET18EK3iZ9zr/jLmkm7YLS5rIYwiqqaUkaQ1HBULoZ+OGQKhZRQ==
+"@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule/-/aws-stepfunctions-execution-status-change-detection-event-rule-1.0.0.tgz#280362f3a2d2c9d6a9de0fd1b16b669547c716c9"
+  integrity sha512-jkmamwRdrRYjVp+kF5iTA/o7IYYUVauOvkuyqePcuaniOXNWQnPjseEw/gtcMW5qxah+OJVTZeEWWp6lUWGyjQ==
   dependencies:
     "@gammarers/aws-cdk-errors" "^1.2.10"
 

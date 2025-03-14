@@ -1,5 +1,6 @@
 {
   "name": "@gammarers/aws-stepfunctions-execution-status-change-notification-stack",
+  "description": "This AWS CDK Stack retrieves the status of Step Functions via EventBridge and sends notifications accordingly. Currently, it only detects and notifies when the status of any machine is either \"Failed\" or \"TimeOut.\"",
   "repository": {
     "type": "git",
     "url": "https://github.com/gammarers/aws-stepfunctions-execution-status-change-notification-stack.git"
@@ -62,7 +63,7 @@
     "constructs": "^10.0.5"
   },
   "dependencies": {
-    "@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule": "^0.1.2"
+    "@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule": "^1.0.0"
   },
   "keywords": [
     "cdk"

@@ -103,7 +103,7 @@
     },
     {
       "name": "@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule",
-      "version": "^0.1.2",
+      "version": "^1.0.0",
       "type": "runtime"
     }
   ],
