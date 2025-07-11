@@ -933,6 +933,7 @@ const stepFunctionsExecutionStatueChangeNotificationStackProps: StepFunctionsExe
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.StepFunctionsExecutionStatueChangeNotificationStackProps.property.terminationProtection">terminationProtection</a></code> | <code>boolean</code> | Whether to enable termination protection for this stack. |
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.StepFunctionsExecutionStatueChangeNotificationStackProps.property.enableRule">enableRule</a></code> | <code>boolean</code> | *No description.* |
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.StepFunctionsExecutionStatueChangeNotificationStackProps.property.notifications">notifications</a></code> | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.Notifications">Notifications</a></code> | *No description.* |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.StepFunctionsExecutionStatueChangeNotificationStackProps.property.timeoutOption">timeoutOption</a></code> | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.TimeoutOption">TimeoutOption</a></code> | *No description.* |
 
 ---
 
@@ -1163,6 +1164,44 @@ public readonly notifications: Notifications;
 ```
 
 - *Type:* <a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.Notifications">Notifications</a>
+
+---
+
+##### `timeoutOption`<sup>Optional</sup> <a name="timeoutOption" id="@gammarers/aws-stepfunctions-execution-status-change-notification-stack.StepFunctionsExecutionStatueChangeNotificationStackProps.property.timeoutOption"></a>
+
+```typescript
+public readonly timeoutOption: TimeoutOption;
+```
+
+- *Type:* <a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.TimeoutOption">TimeoutOption</a>
+
+---
+
+### TimeoutOption <a name="TimeoutOption" id="@gammarers/aws-stepfunctions-execution-status-change-notification-stack.TimeoutOption"></a>
+
+#### Initializer <a name="Initializer" id="@gammarers/aws-stepfunctions-execution-status-change-notification-stack.TimeoutOption.Initializer"></a>
+
+```typescript
+import { TimeoutOption } from '@gammarers/aws-stepfunctions-execution-status-change-notification-stack'
+
+const timeoutOption: TimeoutOption = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-notification-stack.TimeoutOption.property.stateMachineTimeout">stateMachineTimeout</a></code> | <code>aws-cdk-lib.Duration</code> | *No description.* |
+
+---
+
+##### `stateMachineTimeout`<sup>Optional</sup> <a name="stateMachineTimeout" id="@gammarers/aws-stepfunctions-execution-status-change-notification-stack.TimeoutOption.property.stateMachineTimeout"></a>
+
+```typescript
+public readonly stateMachineTimeout: Duration;
+```
+
+- *Type:* aws-cdk-lib.Duration
 
 ---
 
