@@ -12,11 +12,16 @@ export interface Notifications {
   // readonly slack?: Slack;
 }
 
+export interface TimeoutOption {
+  readonly stateMachineTimeout?: Duration;
+}
+
 export interface StepFunctionsExecutionStatueChangeNotificationStackProps extends StackProps {
   // readonly targetResource: TargetResource;
   readonly enableRule?: boolean;
   readonly notifications?: Notifications;
   // readonly resourceNamingOption?: ResourceNamingOption;
+  readonly timeoutOption?: TimeoutOption;
 }
 
 export class StepFunctionsExecutionStatueChangeNotificationStack extends Stack {
@@ -38,8 +43,13 @@ export class StepFunctionsExecutionStatueChangeNotificationStack extends Stack {
     // 👇 Create State Machine
     const stateMachine = new NotificationStateMachine(this, 'StateMachine', {
       stateMachineName: undefined,
-      timeout: Duration.minutes(1),
       notificationTopic: topic,
+      timeout: (() => {
+        if (props.timeoutOption?.stateMachineTimeout) {
+          return props.timeoutOption?.stateMachineTimeout;
+        }
+        return Duration.minutes(3);
+      })(),
     });
 
     // @ts-ignore

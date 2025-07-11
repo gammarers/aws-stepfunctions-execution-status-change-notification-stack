@@ -1,4 +1,4 @@
-import { App } from 'aws-cdk-lib';
+import { App, Duration } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import { StepFunctionsExecutionStatueChangeNotificationStack } from '../src';
 
@@ -13,6 +13,9 @@ describe('Stack Specific Testing', () => {
         'foo@example.com',
         'bar@example.net',
       ],
+    },
+    timeoutOption: {
+      stateMachineTimeout: Duration.minutes(10),
     },
   });
 
