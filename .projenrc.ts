@@ -8,7 +8,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: '@gammarers/aws-stepfunctions-execution-status-change-notification-stack',
   description: 'This AWS CDK Stack retrieves the status of Step Functions via EventBridge and sends notifications accordingly. Currently, it only detects and notifies when the status of any machine is either "Failed" or "TimeOut."',
-  majorVersion: 1,
+  majorVersion: 2,
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-stepfunctions-execution-status-change-notification-stack.git',
   deps: [
