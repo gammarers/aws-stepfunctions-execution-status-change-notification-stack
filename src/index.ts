@@ -16,7 +16,7 @@ export interface TimeoutOption {
   readonly stateMachineTimeout?: Duration;
 }
 
-export interface StepFunctionsExecutionStatueChangeNotificationStackProps extends StackProps {
+export interface StepFunctionsExecutionStatusChangeNotificationStackProps extends StackProps {
   // readonly targetResource: TargetResource;
   readonly enableRule?: boolean;
   readonly notifications?: Notifications;
@@ -24,8 +24,8 @@ export interface StepFunctionsExecutionStatueChangeNotificationStackProps extend
   readonly timeoutOption?: TimeoutOption;
 }
 
-export class StepFunctionsExecutionStatueChangeNotificationStack extends Stack {
-  constructor(scope: Construct, id: string, props: StepFunctionsExecutionStatueChangeNotificationStackProps) {
+export class StepFunctionsExecutionStatusChangeNotificationStack extends Stack {
+  constructor(scope: Construct, id: string, props: StepFunctionsExecutionStatusChangeNotificationStackProps) {
     super(scope, id, props);
 
     // 👇 SNS Topic for notifications
