@@ -28,9 +28,9 @@ yarn add @gammarers/aws-stepfunctions-execution-status-change-notification-stack
 ### Code
 
 ```typescript
-import { RDSDatabaseAutoRunningProtectionStack } from '@gammarers/aws-stepfunctions-execution-status-change-notification-stack';
+import { StepFunctionsExecutionStatusChangeNotificationStack } from '@gammarers/aws-stepfunctions-execution-status-change-notification-stack';
 
-new StepFunctionsExecutionStatueChangeNotificationStack(app, 'StepFunctionsExecutionStatueChangeNotificationStack', {
+new StepFunctionsExecutionStatusChangeNotificationStack(app, 'StepFunctionsExecutionStatusChangeNotificationStack', {
   enableRule: true,
   notifications: {
     emails: [
